@@ -1,0 +1,6 @@
+# DagmasCore dependencies
+# Note: DagmasCore is designed to run entirely on the Python Standard Library (3.10+)
+# with zero external third-party dependencies required for sovereign local vault operations.
+#
+# Optional on-device acceleration:
+# pip install cactus-needle  # Cactus Compute Needle (https://github.com/cactus-compute/needle)
