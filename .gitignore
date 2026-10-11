@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+.DS_Store
+
+# Secrets & credentials
+.env*
+auth.json
+*.key
+*.pem
+
+# Archives, databases & local state
+*archive*
+*.tar.gz
+*.bak
+*.lock
+*.db
+*.db-*
