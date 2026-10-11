@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The Two Architecture Principles — 1990s BYTE Technical Infographics</title>
+<style>
+  @import url('https://fonts.bunny.net/css?family=vt323:400|space-mono:400,700|ibm-plex-sans:400,600,800,900');
+
+  :root {
+    --bg-page: #d4cfb8;
+    --paper: #f4efd8;
+    --paper-border: #111111;
+    --ink: #111111;
+    --crt-amber: #ffb000;
+    --crt-green: #33ff33;
+    --teal: #008080;
+    --steel: #4a646c;
+    --burgundy: #8b0000;
+    --hazard-yellow: #ffee55;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background-color: var(--bg-page);
+    color: var(--ink);
+    font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 30px;
+    line-height: 1.5;
+  }
+
+  .container {
+    max-width: 1040px;
+    margin: 0 auto;
+  }
+
+  .mag-header {
+    border-bottom: 5px solid var(--ink);
+    padding-bottom: 12px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-family: 'Space Mono', monospace;
+  }
+
+  .mag-header h1 {
+    margin: 0;
+    font-size: 34px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    line-height: 1.1;
+  }
+
+  .mag-header .issue {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: right;
+  }
+
+  .overview-banner {
+    background: #111;
+    color: var(--hazard-yellow);
+    padding: 16px 20px;
+    margin-bottom: 35px;
+    border: 3px solid #111;
+    box-shadow: 6px 6px 0px rgba(0,0,0,0.25);
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+  }
+
+  .principle-card {
+    background-color: var(--paper);
+    border: 3px solid var(--paper-border);
+    box-shadow: 8px 8px 0px rgba(0,0,0,0.3);
+    padding: 26px;
+    margin-bottom: 45px;
+    position: relative;
+  }
+
+  .principle-card::before {
+    content: "DAGMAS BRAIN VAULT // ARCHITECTURE PRINCIPLE SPEC SHEET";
+    position: absolute;
+    top: -12px;
+    left: 24px;
+    background: var(--ink);
+    color: #fff;
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    padding: 2px 10px;
+    letter-spacing: 1px;
+    font-weight: 700;
+  }
+
+  .card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 3px solid var(--ink);
+    padding-bottom: 8px;
+    margin-bottom: 18px;
+  }
+
+  .card-title {
+    font-size: 24px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0;
+    letter-spacing: -0.5px;
+  }
+
+  .card-id {
+    font-family: 'Space Mono', monospace;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--teal);
+  }
+
+  .analogy-box {
+    background: #fff;
+    border-left: 6px solid var(--steel);
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 14px 18px;
+    margin-bottom: 20px;
+    font-style: italic;
+    font-size: 15px;
+    color: #222;
+  }
+
+  .analogy-label {
+    font-family: 'Space Mono', monospace;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 11px;
+    color: var(--steel);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    display: block;
+  }
+
+  .img-frame {
+    border: 3px solid var(--ink);
+    background: #000;
+    margin-bottom: 20px;
+    box-shadow: 4px 4px 0px rgba(0,0,0,0.2);
+    overflow: hidden;
+  }
+
+  .img-frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .caption {
+    font-size: 12px;
+    font-family: 'Space Mono', monospace;
+    color: #555;
+    padding: 8px 12px;
+    background: #eae5cf;
+    border-top: 2px solid var(--ink);
+  }
+
+  .crt-screen {
+    background: #0d130e;
+    border: 2px solid var(--ink);
+    padding: 12px;
+    color: var(--crt-green);
+    font-family: 'VT323', monospace;
+    font-size: 17px;
+    line-height: 1.25;
+    box-shadow: inset 0 0 10px rgba(0,255,0,0.2);
+    margin-top: 14px;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="mag-header">
+    <div>
+      <h1>The Two Architecture Principles</h1>
+      <div style="font-size: 15px; color: var(--steel); margin-top: 4px;">KEEPING THINGS QUIET AND CALM • 1990s BYTE TECHNICAL INFOGRAPHICS</div>
+    </div>
+    <div class="issue">
+      <div>VOL. 1 • ARCHITECTURAL DISCIPLINE</div>
+      <div>FIT-CHECK-8GB CERTIFIED</div>
+    </div>
+  </div>
+
+  <div class="overview-banner">
+    <strong>PHILOSOPHY MANDATE:</strong> "Good software isn't just about building walls; it’s about good manners and staying calm." Designed specifically for everyday consumer laptops (8 GB RAM Mac / Linux) to eliminate CPU thrashing, fan noise, and spaghetti code.
+  </div>
+
+  <!-- PRINCIPLE 1 -->
+  <div class="principle-card">
+    <div class="card-top">
+      <h2 class="card-title">Principle 1: The Kitchen Light Rule (Needle Local-First Routing)</h2>
+      <span class="card-id">FIG. 6-A // SPARSE ROUTING</span>
+    </div>
+
+    <div class="analogy-box">
+      <span class="analogy-label">The Core Analogy:</span>
+      "Think about when you wake up thirsty at three in the morning. Do you run around flipping the switches in the attic, garage, basement, and guest bedroom? Of course not. That’s absurd and wastes electricity. You only turn on the little kitchen light to grab a glass of water. Our router wakes up only the exact tool needed. Your laptop fans stay whisper-quiet, your battery lasts all day, and your cloud API bills stay flat."
+    </div>
+
+    <div class="img-frame">
+      <img src="kitchen_light_rule_infographic.png" alt="The Kitchen Light Rule Infographic">
+      <div class="caption">
+        <strong>ARCHITECTURAL HOUSE CUTAWAY:</strong> At 3:00 AM, the attic, guest room, master suite, garage, and basement remain dormant (0W / 0 RPM). Only the exact kitchen light illuminates the glass of water. Needle 3 (121M) and Gemma 2 awaken only the single required tool.
+      </div>
+    </div>
+
+    <div class="crt-screen">
+ROUTING_TELEMETRY: [PRINCIPLE_1: KITCHEN_LIGHT_DISPATCHER]<br>
+&gt;&gt; USER TASK: "Verify code syntax and run unit tests"<br>
+&gt;&gt; NEEDLE 3 (121M) EVALUATION: DETECTED SINGLE SPECIALIST INTENT [team-engineering]<br>
+&gt;&gt; ACTIVE SUBSYSTEMS ENERGIZED: 1/9 (prove_it_done.py). ALL OTHER SQUADS ASLEEP.<br>
+&gt;&gt; THERMAL STATUS: 38°C (FANS OFF) | CLOUD API USAGE: $0.00 | STATUS: TRANQUIL [PASS].
+    </div>
+  </div>
+
+  <!-- PRINCIPLE 2 -->
+  <div class="principle-card">
+    <div class="card-top">
+      <h2 class="card-title">Principle 2: Structural Cleanliness (No Spaghetti Code)</h2>
+      <span class="card-id">FIG. 6-B // COHESION GATE</span>
+    </div>
+
+    <div class="analogy-box">
+      <span class="analogy-label">The Core Analogy:</span>
+      "We enforce a cohesion gate that stops duplicate functions, cleans up messy imports, and bans hardcoded machine paths so the code runs cleanly on anyone’s Mac or Linux laptop."
+    </div>
+
+    <div class="img-frame">
+      <img src="structural_cleanliness_infographic.png" alt="Structural Cleanliness Infographic">
+      <div class="caption">
+        <strong>COHESION GATE &amp; SKELETON STRAINER:</strong> Tangled spaghetti code (duplicate defs, circular imports, machine host paths) is processed through the industrial AST Cohesion Gate, producing clean, standardized modular Python components that run natively on macOS and Linux.
+      </div>
+    </div>
+
+    <div class="crt-screen">
+COHESION_TELEMETRY: [PRINCIPLE_2: CODE_SKELETON_AUDITOR]<br>
+&gt;&gt; SCANNING REPOSITORY GRAPH: DagmasCore (89/89 TESTS)<br>
+&gt;&gt; DUPLICATE TOP-LEVEL FUNCTION IDENTIFIERS: 0 DETECTED.<br>
+&gt;&gt; MACHINE-SPECIFIC HARDCODED PATHS: 0 DETECTED (ALL RELATIVE TO HOME).<br>
+&gt;&gt; CROSS-PLATFORM OS TEST: PASSED ON MACOS &amp; LINUX POSIX. STATUS: PRISTINE [PASS].
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

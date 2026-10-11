@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Brain Vault 1990s Infographics Collection</title>
+<style>
+  @import url('https://fonts.bunny.net/css?family=vt323:400|space-mono:400,700|ibm-plex-sans:400,600,800');
+
+  :root {
+    --bg-page: #d4cfb8;
+    --paper: #f4efd8;
+    --paper-border: #222222;
+    --ink: #111111;
+    --crt-amber: #ffb000;
+    --crt-green: #33ff33;
+    --teal: #008080;
+    --steel: #4a646c;
+    --burgundy: #8b0000;
+    --highlight: #ffee55;
+  }
+
+  body {
+    background-color: var(--bg-page);
+    color: var(--ink);
+    font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 30px;
+    line-height: 1.4;
+  }
+
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .mag-header {
+    border-bottom: 4px solid var(--ink);
+    padding-bottom: 8px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-family: 'Space Mono', monospace;
+  }
+
+  .mag-header h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+  }
+
+  .mag-header .issue {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .infographic-sheet {
+    background-color: var(--paper);
+    border: 3px solid var(--paper-border);
+    box-shadow: 8px 8px 0px rgba(0,0,0,0.3);
+    padding: 24px;
+    margin-bottom: 35px;
+    position: relative;
+  }
+
+  .infographic-sheet::before {
+    content: "TECHNICAL BENCHMARK / SPEC SHEET";
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    background: var(--ink);
+    color: #fff;
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    padding: 2px 8px;
+    letter-spacing: 1px;
+    font-weight: 700;
+  }
+
+  .infographic-title {
+    font-size: 22px;
+    font-weight: 800;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 6px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .infographic-title .fig-no {
+    color: var(--teal);
+    font-family: 'Space Mono', monospace;
+  }
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+  }
+
+  .grid-5 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+  }
+
+  .retro-box {
+    border: 2px solid var(--ink);
+    padding: 12px;
+    background: #fff;
+    box-shadow: 3px 3px 0px rgba(0,0,0,0.15);
+  }
+
+  .retro-box h4 {
+    margin: 0 0 8px 0;
+    font-size: 13px;
+    font-family: 'Space Mono', monospace;
+    background: var(--steel);
+    color: #fff;
+    padding: 3px 6px;
+    text-transform: uppercase;
+  }
+
+  .metric-badge {
+    font-family: 'VT323', monospace;
+    font-size: 32px;
+    line-height: 1;
+    color: var(--burgundy);
+    display: block;
+    margin: 4px 0;
+  }
+
+  .status-pass {
+    background: #e0f8e0;
+    border: 1px solid #00aa00;
+    color: #006600;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    padding: 2px 6px;
+    font-size: 11px;
+    display: inline-block;
+  }
+
+  .status-block {
+    background: #ffe8e8;
+    border: 1px solid #cc0000;
+    color: #990000;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    padding: 2px 6px;
+    font-size: 11px;
+    display: inline-block;
+  }
+
+  .dot-matrix {
+    font-family: 'VT323', monospace;
+    font-size: 15px;
+    background: #111;
+    color: var(--crt-amber);
+    padding: 10px;
+    border-radius: 2px;
+    overflow-x: auto;
+    margin-top: 8px;
+    line-height: 1.2;
+  }
+
+  .dot-matrix-green {
+    color: var(--crt-green);
+  }
+
+  .flow-arrow {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--steel);
+    margin: auto 0;
+  }
+
+  table.retro-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    margin-top: 10px;
+  }
+
+  table.retro-table th {
+    background: var(--ink);
+    color: #fff;
+    padding: 6px 8px;
+    text-align: left;
+    font-family: 'Space Mono', monospace;
+  }
+
+  table.retro-table td {
+    padding: 6px 8px;
+    border-bottom: 1px solid #bbb;
+  }
+
+  table.retro-table tr:nth-child(even) {
+    background-color: #faf6ea;
+  }
+
+  .caption {
+    font-size: 11px;
+    font-style: italic;
+    color: #555;
+    margin-top: 8px;
+    border-top: 1px dashed #999;
+    padding-top: 4px;
+    font-family: 'Space Mono', monospace;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="mag-header">
+    <div>
+      <h1>DAGMAS Brain Vault</h1>
+      <div style="font-size: 14px; color: var(--steel);">BYTE / MACWORLD TECH SPEC SHEET COMPENDIUM</div>
+    </div>
+    <div class="issue">VOL. 1 • REPO v1.0 • OCTOBER 1995 STYLE</div>
+  </div>
+
+  <!-- HERO BANNER SHEET -->
+  <div class="infographic-sheet">
+    <div class="infographic-title">
+      <span>Inside The DAGMAS Brain Vault: Exploded Architecture</span>
+      <span class="fig-no">HERO COVER</span>
+    </div>
+    <div style="border: 2px solid var(--ink); background: #000; padding: 2px;">
+      <img src="brain_vault_hero_banner.jpg" alt="DAGMAS Brain Vault // The Sovereign AI Engine Banner" style="width: 100%; height: auto; display: block;">
+      <div style="background: #faf6ea; padding: 8px 12px; font-size: 11px; font-family: 'Space Mono', monospace; border-top: 1px solid #111;">
+        <strong>1990s BYTE TECHNICAL SUPPLEMENT:</strong> Exploded view of the Sovereign AI Engine (SAIE-X1) featuring 64-bit sovereign cognitive processor core, integrated CRT monitoring station with 60 FPS real-time graphics oscilloscope, reinforced Level-7 cryptographic silicon chassis with Type-0700 locking mechanism, 3D vector graph database mesh, and dual bilingual data streams.
+      </div>
+    </div>
+    <div class="caption">SOURCE REPRINT: BYTE Magazine Volume 16, No. 6 Technical Supplement.</div>
+  </div>
+
+  <!-- INFOGRAPHIC 1: Paragraph 1 (What Brain Vault Is) -->
+  <div class="infographic-sheet">
+    <div class="infographic-title">
+      <span>Data Airlock & Sovereign Safe Architecture</span>
+
+      <span class="fig-no">FIG. 1-A</span>
+    </div>
+    <div class="grid-2">
+      <div class="retro-box">
+        <h4>Physical Safe Sandbox</h4>
+        <span class="metric-badge">0700 (drwx------)</span>
+        <p style="font-size: 12px; margin: 4px 0;"><strong>Enforcement:</strong> Owner OS UID only. Direct file locking in <code>~/.brain-vault</code>.</p>
+        <div class="status-pass">✓ SYSTEM OS DENIES UNAUTHORIZED READ/WRITE</div>
+        <div class="dot-matrix">
+$ ls -ld ~/.brain-vault<br>
+drwx------  12 user    staff  384 Oct 10 20:33 .brain-vault
+        </div>
+
+      </div>
+      <div class="retro-box">
+        <h4>Task Routing Division</h4>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 6px;">
+          <div>
+            <span class="metric-badge" style="color: var(--teal);">90%+</span>
+            <small>Local Work ($0.00 cost)</small>
+          </div>
+          <div style="text-align: right;">
+            <span class="metric-badge" style="color: var(--burgundy);">&lt;10%</span>
+            <small>Escalated Cloud Tasks</small>
+          </div>
+        </div>
+        <div class="dot-matrix dot-matrix-green">
+[AIRLOCK GATEWAY: STDIO MCP PROTOCOL]<br>
+- 14 Credential Classes Redacted<br>
+- Prompt Injections Neutralized<br>
+- Context Pruned (Budget Guard Active)
+        </div>
+      </div>
+    </div>
+    <div class="caption">DATA COUPLING: Directly corresponds to Paragraph 1 (What Brain Vault Is &amp; The USB Airlock Key).</div>
+  </div>
+
+  <!-- INFOGRAPHIC 2: Paragraph 2 (The 5 Security Tests) -->
+  <div class="infographic-sheet">
+    <div class="infographic-title">
+      <span>The 5 Security Stress Tests — Automated Telemetry &amp; Cutaways</span>
+      <span class="fig-no">FIG. 2-B</span>
+    </div>
+    
+    <div style="margin-bottom: 16px; background: #fff; border: 2px solid var(--ink); padding: 10px 14px; font-size: 13px;">
+      <strong>DEDICATED 1990s BYTE INFOGRAPHIC SUITE:</strong> Open full standalone interactive edition: 
+      <a href="THE_FIVE_SECURITY_GAUNTLETS_INFOGRAPHICS.html" style="color: var(--teal); font-weight: bold; text-decoration: underline;">THE_FIVE_SECURITY_GAUNTLETS_INFOGRAPHICS.html</a>
+    </div>
+
+    <div class="grid-5" style="margin-bottom: 20px;">
+      <div class="retro-box">
+        <h4>1. RCE Guard</h4>
+        <div class="status-block" style="margin-bottom: 4px;">TEST: <code>; || &amp;&amp;</code></div>
+        <p style="font-size: 11px; margin: 4px 0;">Blocked shell chaining in <code>prove_it_done</code>.</p>
+        <div class="status-pass">✓ REJECTED</div>
+      </div>
+      <div class="retro-box">
+        <h4>2. 14 Secrets</h4>
+        <div class="status-block" style="margin-bottom: 4px;">TEST: 14 Classes</div>
+        <p style="font-size: 11px; margin: 4px 0;">Stripe, AWS, DSN, ETH, RSA keys scrubbed.</p>
+        <div class="status-pass">✓ 100% CLEAN</div>
+      </div>
+      <div class="retro-box">
+        <h4>3. Bouncer</h4>
+        <div class="status-block" style="margin-bottom: 4px;">TEST: DAN / Spoof</div>
+        <p style="font-size: 11px; margin: 4px 0;">Neutralized instruction override &amp; jailbreaks.</p>
+        <div class="status-pass">✓ DEFANGED</div>
+      </div>
+      <div class="retro-box">
+        <h4>4. 0700 Safe</h4>
+        <div class="status-block" style="margin-bottom: 4px;">TEST: POSIX Octal</div>
+        <p style="font-size: 11px; margin: 4px 0;">Verified folder permissions on touch.</p>
+        <div class="status-pass">✓ 0o700 LOCK</div>
+      </div>
+      <div class="retro-box">
+        <h4>5. AST X-Ray</h4>
+        <div class="status-block" style="margin-bottom: 4px;">TEST: eval/os.sys</div>
+        <p style="font-size: 11px; margin: 4px 0;">Scanned syntax trees for toxic primitives.</p>
+        <div class="status-pass">✓ GATE SHUT</div>
+      </div>
+    </div>
+
+    <!-- Gallery of the 5 Cutaways -->
+    <div style="display: flex; flex-direction: column; gap: 20px;">
+      <div style="border: 2px solid var(--ink); background: #000; padding: 2px;">
+        <img src="handcuffed_run_remake.jpg" alt="1. The Handcuffed Run Command" style="width: 100%; height: auto; display: block;">
+        <div style="background: #faf6ea; padding: 6px 10px; font-size: 11px; font-family: 'Space Mono', monospace; border-top: 1px solid #111;">
+          <strong>GAUNTLET 1:</strong> The Handcuffed Run Command (Stopping Rogue Code). Semicolon trapped at basement valve.
+        </div>
+      </div>
+      <div style="border: 2px solid var(--ink); background: #000; padding: 2px;">
+        <img src="thick_marker_remake.jpg" alt="2. The Thick Black Permanent Marker" style="width: 100%; height: auto; display: block;">
+        <div style="background: #faf6ea; padding: 6px 10px; font-size: 11px; font-family: 'Space Mono', monospace; border-top: 1px solid #111;">
+          <strong>GAUNTLET 2:</strong> The Thick Black Permanent Marker (All 14 Password Classes Scrubbed).
+        </div>
+      </div>
+      <div style="border: 2px solid var(--ink); background: #000; padding: 2px;">
+        <img src="nightclub_bouncer_infographic.png" alt="3. The Nightclub Bouncer" style="width: 100%; height: auto; display: block;">
+        <div style="background: #faf6ea; padding: 6px 10px; font-size: 11px; font-family: 'Space Mono', monospace; border-top: 1px solid #111;">
+          <strong>GAUNTLET 3:</strong> The Nightclub Bouncer (Prompt Injection Defanging &amp; Velvet Rope Gate).
+        </div>
+      </div>
+      <div style="border: 2px solid var(--ink); background: #000; padding: 2px;">
+        <img src="thumbprint_safe_infographic.png" alt="4. The Thumbprint Safe" style="width: 100%; height: auto; display: block;">
+        <div style="background: #faf6ea; padding: 6px 10px; font-size: 11px; font-family: 'Space Mono', monospace; border-top: 1px solid #111;">
+          <strong>GAUNTLET 4:</strong> The Thumbprint Safe (Strict POSIX 0700 Permissions).
+        </div>
+      </div>
+      <div style="border: 2px solid var(--ink); background: #000; padding: 2px;">
+        <img src="airport_baggage_xray_infographic.png" alt="5. The Airport Baggage X-Ray" style="width: 100%; height: auto; display: block;">
+        <div style="background: #faf6ea; padding: 6px 10px; font-size: 11px; font-family: 'Space Mono', monospace; border-top: 1px solid #111;">
+          <strong>GAUNTLET 5:</strong> The Airport Baggage X-Ray (AST Code Scanner &amp; Hard Red Light Gate).
+        </div>
+      </div>
+    </div>
+
+    <div class="dot-matrix" style="margin-top: 15px;">
+SECURITY VERIFICATION RESULTS: 5/5 PASSED (Ran 67 tests in 0.232s -- OK) | EXIT CODE: 0
+    </div>
+    <div class="caption">DATA COUPLING: Directly corresponds to Paragraph 2 (The 5 Security Stress Tests).</div>
+  </div>
+
+  <!-- INFOGRAPHIC 3: Paragraph 3 (The 2 Architecture Principles) -->
+  <div class="infographic-sheet">
+    <div class="infographic-title">
+      <span>Architectural Principles &amp; Sparse Needle Routing</span>
+      <span class="fig-no">FIG. 3-C</span>
+    </div>
+
+    <div style="margin-bottom: 16px; background: #fff; border: 2px solid var(--ink); padding: 10px 14px; font-size: 13px;">
+      <strong>DEDICATED 1990s BYTE INFOGRAPHIC SUITE:</strong> Open full standalone interactive edition: 
+      <a href="THE_TWO_ARCHITECTURE_PRINCIPLES_INFOGRAPHICS.html" style="color: var(--teal); font-weight: bold; text-decoration: underline;">THE_TWO_ARCHITECTURE_PRINCIPLES_INFOGRAPHICS.html</a>
+    </div>
+
+    <div class="grid-2">
+      <div class="retro-box">
+        <h4>Principle 1: The Kitchen Light Rule</h4>
+        <p style="font-size: 12px;"><strong>Concept:</strong> Sparse wake-up. Only 1-2 exact tools energized per task rather than spinning up 50 idle daemons.</p>
+        <table class="retro-table">
+          <tr><th>System Metric</th><th>Standard Agent</th><th>Brain Vault</th></tr>
+          <tr><td>Idle RAM</td><td>4.2 GB</td><td><strong>&lt; 150 MB</strong></td></tr>
+          <tr><td>Fan Noise</td><td>High (5200 RPM)</td><td><strong>Whisper (0 RPM)</strong></td></tr>
+          <tr><td>Routine Task Cost</td><td>$0.04 / call</td><td><strong>$0.00 (Local)</strong></td></tr>
+        </table>
+      </div>
+      <div class="retro-box">
+        <h4>Principle 2: Structural Cohesion Gate</h4>
+        <p style="font-size: 12px;"><strong>AST Verification:</strong> AST scans enforce clean module boundaries, eliminate duplicate top-level function signatures, and reject hardcoded host machine paths.</p>
+        <div class="dot-matrix dot-matrix-green">
+[AST COHESION SCANNER]<br>
+- Top-level duplicate defs: 0<br>
+- Hardcoded /Users/ or /home/: 0<br>
+- Syntax compliance: Python 3.10+ stdlib<br>
+- Status: PASS
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery of Principle Cutaways -->
+    <div style="display: flex; flex-direction: column; gap: 20px; margin-top: 20px;">
+      <div style="border: 2px solid var(--ink); background: #000; padding: 2px;">
+        <img src="kitchen_light_rule_infographic.png" alt="Principle 1: The Kitchen Light Rule" style="width: 100%; height: auto; display: block;">
+        <div style="background: #faf6ea; padding: 6px 10px; font-size: 11px; font-family: 'Space Mono', monospace; border-top: 1px solid #111;">
+          <strong>PRINCIPLE 1:</strong> The Kitchen Light Rule. Needle 3 (121M) / Gemma 2 sparse routing wakes up only the exact tool needed. Fans stay whisper quiet (0 RPM), battery lasts all day, and cloud API bills stay flat.
+        </div>
+      </div>
+      <div style="border: 2px solid var(--ink); background: #000; padding: 2px;">
+        <img src="structural_cleanliness_infographic.png" alt="Principle 2: Structural Cleanliness" style="width: 100%; height: auto; display: block;">
+        <div style="background: #faf6ea; padding: 6px 10px; font-size: 11px; font-family: 'Space Mono', monospace; border-top: 1px solid #111;">
+          <strong>PRINCIPLE 2:</strong> Structural Cleanliness (No Spaghetti Code). Cohesion gate stops duplicate functions, cleans messy imports, and bans hardcoded machine paths for cross-platform portability.
+        </div>
+      </div>
+    </div>
+
+    <div class="caption">DATA COUPLING: Directly corresponds to Paragraph 3 (The 2 Architecture Principles).</div>
+  </div>
+
+  <!-- INFOGRAPHIC 4: Paragraph 4 (Workflows, Skills, and Living DOs & DONTs) -->
+  <div class="infographic-sheet">
+    <div class="infographic-title">
+      <span>Brain Workflows, Specialist Skills &amp; Living Ledgers</span>
+      <span class="fig-no">FIG. 4-D</span>
+    </div>
+    <div class="grid-3">
+      <div class="retro-box">
+        <h4>1. Proven Workflow</h4>
+        <p style="font-size: 11px;">Deterministic 4-step artisan recipe:</p>
+        <div style="font-size: 11px; font-family: 'Space Mono', monospace; line-height: 1.6;">
+          ① Preflight Check<br>
+          ② Privacy Scrub<br>
+          ③ Local Exec<br>
+          ④ Exit 0 Verify
+        </div>
+      </div>
+      <div class="retro-box">
+        <h4>2. Modular Skills</h4>
+        <p style="font-size: 11px;">Craftsperson toolbelts (<code>SKILL.md</code>):</p>
+        <div style="font-size: 11px; font-family: 'Space Mono', monospace; line-height: 1.6;">
+          • Babylon.js / Spector<br>
+          • Cactus Compute Needle 3<br>
+          • LaunchDaemon Automations<br>
+          • AST Security Gates
+        </div>
+      </div>
+      <div class="retro-box">
+        <h4>3. Living DOs / DONTs</h4>
+        <p style="font-size: 11px;">Dynamic employee handbooks:</p>
+        <div style="font-size: 11px; font-family: 'Space Mono', monospace; line-height: 1.6;">
+          • <code>DO.md</code> (Adopted rules)<br>
+          • <code>DONT.md</code> (Blocked errors)<br>
+          • <code>SOUL.md</code> (Manager roles)<br>
+          • Nightly Memory Sync
+        </div>
+      </div>
+    </div>
+
+    <!-- Cutaway: The Artisan Workflows & Skills -->
+    <div style="margin-top: 20px; border: 2px solid var(--ink); background: #000; padding: 2px;">
+      <img src="workflows_skills.jpg" alt="The Artisan Workflows & Specialist Skills" style="width: 100%; height: auto; display: block;">
+      <div style="background: #faf6ea; padding: 6px 10px; font-size: 11px; font-family: 'Space Mono', monospace; border-top: 1px solid #111;">
+        <strong>THE ARTISAN WORKFLOWS &amp; SKILLS:</strong> Sourdough recipe sequence (Preflight, Privacy scrub, Local execution, Exit 0 verify) alongside modular craftsperson toolbelts (Babylon.js 60 FPS, 432 Hz Solfeggio, LaunchDaemon).
+      </div>
+    </div>
+
+    <div class="caption">DATA COUPLING: Directly corresponds to Paragraph 4 (Workflows, Skills, and Living DOs &amp; DONTs).</div>
+  </div>
+
+  <!-- INFOGRAPHIC 5: Paragraph 5 (The 9 Squads & Boss Report) -->
+  <div class="infographic-sheet">
+    <div class="infographic-title">
+      <span>The 9 Squad Hierarchy &amp; Nightly Boss Review Engine</span>
+      <span class="fig-no">FIG. 5-E</span>
+    </div>
+    <table class="retro-table">
+      <thead>
+        <tr>
+          <th>Squad ID</th>
+          <th>Lead Manager</th>
+          <th>Specialization</th>
+          <th>Nightly Memory Ledger</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>team-research</strong></td><td>Dr. Aris Vance</td><td>Fact verification &amp; primary citations</td><td><code>research_memory.json</code></td></tr>
+        <tr><td><strong>team-engineering</strong></td><td>Kaelen Drake</td><td>Zero-lint code, Exit 0 validation</td><td><code>engineering_memory.json</code></td></tr>
+        <tr><td><strong>team-gaming</strong></td><td>Nova Mercer</td><td>Babylon.js 3D &amp; 60 FPS Spector profiling</td><td><code>gaming_memory.json</code></td></tr>
+        <tr><td><strong>team-legal</strong></td><td>Elena Rostova</td><td>License audits &amp; privacy compliance</td><td><code>legal_memory.json</code></td></tr>
+        <tr><td><strong>team-sound</strong></td><td>Jaxen Reed</td><td>432 Hz Solfeggio pure tone synthesis</td><td><code>sound_memory.json</code></td></tr>
+        <tr><td><strong>team-marketing</strong></td><td>Sloane Sterling</td><td>Organic growth, CTR, authentic voice</td><td><code>marketing_memory.json</code></td></tr>
+        <tr><td><strong>team-crypto</strong></td><td>Cyrus Vance</td><td>On-chain safety &amp; cold key protection</td><td><code>crypto_memory.json</code></td></tr>
+        <tr><td><strong>team-automations</strong></td><td>Marcus Kane</td><td>LaunchDaemons &amp; self-healing crons</td><td><code>automations_memory.json</code></td></tr>
+        <tr><td><strong>team-publishing</strong></td><td>Tessa Cross</td><td>Staging verification &amp; master backup</td><td><code>publishing_memory.json</code></td></tr>
+      </tbody>
+    </table>
+
+    <!-- Cutaway: The Living DOs & DONTs & 9 Squads Huddle -->
+    <div style="margin-top: 20px; border: 2px solid var(--ink); background: #000; padding: 2px;">
+      <img src="squads_dos_donts.jpg" alt="The Living DOs & DONTs // The 9 Squads Team Huddle" style="width: 100%; height: auto; display: block;">
+      <div style="background: #faf6ea; padding: 6px 10px; font-size: 11px; font-family: 'Space Mono', monospace; border-top: 1px solid #111;">
+        <strong>THE 9 SQUADS TEAM HUDDLE:</strong> Living Employee Handbook (DO.md &amp; DONT.md) updating nightly without AI amnesia, org chart with 9 subsidiary teams, and CRT review engine.
+      </div>
+    </div>
+
+    <div class="dot-matrix dot-matrix-green" style="margin-top: 10px;">
+[EXECUTIVE REPORT GENERATED]: ~/.brain-vault/ledgers/reports/boss_report_latest.md<br>
+- 9 Squad Managers Evaluated Daily<br>
+- Total Tasks Completed Logged: 108<br>
+- Injections Defanged &amp; Rules Synchronized to SOUL.md: True
+    </div>
+    <div class="caption">DATA COUPLING: Directly corresponds to Paragraph 5 (The 9 Squads &amp; The Nightly Team Huddle).</div>
+  </div>
+
+  <!-- INFOGRAPHIC 6: No Rigid Installer (The Grilling Interview) -->
+  <div class="infographic-sheet">
+    <div class="infographic-title">
+      <span>No Rigid Installer: The Master Architect Grilling Interview</span>
+      <span class="fig-no">FIG. 6-F</span>
+    </div>
+
+    <div style="border: 2px solid var(--ink); background: #000; padding: 2px;">
+      <img src="grilling_interview.jpg" alt="No Rigid Installer: The Architectural Grilling Interview" style="width: 100%; height: auto; display: block;">
+      <div style="background: #faf6ea; padding: 6px 10px; font-size: 11px; font-family: 'Space Mono', monospace; border-top: 1px solid #111;">
+        <strong>THE ARCHITECTURAL GRILLING INTERVIEW:</strong> Guided questionnaire by the fire covering Vector DBs, Needle 3 local model routing, Bitwarden/0600 keystore, 14 secret classes, and permanent default agent rules.
+      </div>
+    </div>
+
+    <div class="caption">DATA COUPLING: Directly corresponds to Section 6 (No Rigid Installer: Just Grab the Skill and Let It Grill You).</div>
+  </div>
+
+  <!-- INFOGRAPHIC 7: The Four Sovereign Pillars -->
+  <div class="infographic-sheet">
+    <div class="infographic-title">
+      <span>The 4 Sovereign Pillars: ADHD Skeptor, Quantum Graph DB, Bilingual Swarm &amp; Nostr Mesh</span>
+      <span class="fig-no">FIG. 7-G</span>
+    </div>
+
+    <div class="grid-4" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 15px;">
+      <div class="retro-box">
+        <h4>1. ADHD Skill Skeptor</h4>
+        <p style="font-size: 11px;">Single-task hyperfocus lock rejecting distraction strikes. Integrated with <strong>Spector.js</strong> 60 FPS WebGL/WebGPU frame profiling (&le; 150 draw calls).</p>
+      </div>
+      <div class="retro-box">
+        <h4>2. Quantum Graph DB</h4>
+        <p style="font-size: 11px;">Every task output is automatically graphified into <code>code_graph.json</code> nodes/edges and vector-indexed in <strong>Qdrant</strong> on port 6333 (16 collections).</p>
+      </div>
+      <div class="retro-box">
+        <h4>3. Bilingual Token Engine</h4>
+        <p style="font-size: 11px;">Inter-agent swarm packets strictly in <strong>Simplified Chinese (简体中文)</strong> for ~70% token compression; user-facing outputs strictly in <strong>English</strong>.</p>
+      </div>
+      <div class="retro-box">
+        <h4>4. Nostr Key Mesh</h4>
+        <p style="font-size: 11px;">Jack Dorsey / Nostr style asymmetric Ed25519 public/private key encryption with signed envelopes. Zero plaintext leakage across local buses.</p>
+      </div>
+    </div>
+
+    <div style="border: 2px solid var(--ink); background: #000; padding: 2px;">
+      <img src="quantum_mesh_nostr.jpg" alt="The Four Sovereign Pillars: ADHD Skeptor, Quantum Graph DB, Chinese Swarm &amp; Nostr Mesh" style="width: 100%; height: auto; display: block;">
+      <div style="background: #faf6ea; padding: 6px 10px; font-size: 11px; font-family: 'Space Mono', monospace; border-top: 1px solid #111;">
+        <strong>1990s BYTE PAGE 142 ARCHITECTURAL CUTAWAY:</strong> Exploded technical schematic displaying the ADHD Skill Skeptor (60 FPS dial gauge), 3D Quantum Vector Graph DB, Chinese-English Bilingual Token Optimization, and Nostr Asymmetric Public-Key Mesh.
+      </div>
+    </div>
+
+    <div class="caption">DATA COUPLING: Directly corresponds to Section 7 (The Four Sovereign Pillars).</div>
+  </div>
+
+  <!-- INFOGRAPHIC 8: Cozy Fireplace Laptop Closing Animation -->
+  <div class="infographic-sheet">
+    <div class="infographic-title">
+      <span>Signing Off: "Much Love" Fireplace Screen Closing Animation</span>
+      <span class="fig-no">FIG. 8-H</span>
+    </div>
+
+    <div style="border: 2px solid var(--ink); background: #000; padding: 2px; text-align: center;">
+      <img src="cozy_fireplace_much_love_closing.gif" alt="Cozy Fireplace Laptop Typing Much Love and Closing" style="width: 100%; height: auto; display: block;">
+      <div style="background: #faf6ea; padding: 6px 10px; font-size: 11px; font-family: 'Space Mono', monospace; border-top: 1px solid #111; text-align: left;">
+        <strong>COZY FIREPLACE LAPTOP ANIMATION (MATCHING FIG. 0):</strong> In the rustic log cabin beside the warm crackling fireplace, the terminal types "much love.", pauses with a blinking emerald cursor, and smoothly hinges closed for the night.
+      </div>
+    </div>
+
+    <div class="caption">DATA COUPLING: Closing sign-off animation for DAGMAS Brain Vault (matching opening cabin scene).</div>
+  </div>
+
+
+</div>
+
+</body>
+</html>
